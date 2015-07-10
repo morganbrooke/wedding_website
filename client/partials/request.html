@@ -1,0 +1,68 @@
+<script>
+  $(document).ready(function(){
+    $(".button-collapse").sideNav();
+  });
+</script>
+
+<nav>
+    <div class="nav-wrapper black">
+      <a href="#/" class="brand-logo hide-on-small-only">Mojo Wedding 2017</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">Menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#/location">Wedding Location</a></li>
+        <li><a href="#/history">Couple's History</a></li>
+        <li><a href="#/weddingparty">Wedding Party Information</a></li>
+        <li><a href="#/accomidations">Wedding Accomidations</a></li>
+        <li><a href="#/request" class="active">Request a Reception Song</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="#/location">Wedding Location</a></li>
+        <li><a href="#/history">Couple's History</a></li>
+        <li><a href="#/weddingparty">Wedding Party</a></li>
+        <li><a href="#/accomidations">Wedding Accomidations</a></li>
+        <li><a href="#/request">Request a Reception Song</a></li>
+      </ul>
+    </div>
+</nav>
+<div class="row" id="pike">
+    <form name = "songRequest" class="col s12">
+        <div class="input-field col s6">
+          <input name="name" type="text" ng-model= "rc.newRequest.name">
+          <label for="name">Your Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="artist_name" type="text" class="validate" ng-model= "rc.newRequest.artist_name">
+          <label for="artist_name">Artist Name</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="song_name" type="text" class="validate" ng-model= "rc.newRequest.song_name">
+          <label for="song_name">Song Name</label>
+        </div>
+      <button class="btn waves-effect waves-light black" type="submit" value= "add new request" ng-click= "rc.addRequest()" >Submit
+      </button>
+    </form>
+  <div class="container">
+    <input type="text" ng-model="rc.filter_name" placeholder = "search...">
+    <div class="row">
+      <div class="col s12" style="overflow: scroll; height: 50vh">
+        <table class="bordered">
+          <thead>
+            <tr>
+              <th>Request Made By</th>
+              <th>Artist Name</th>
+              <th>Song Name</th>
+              <th>Submitted Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat= "request in rc.requests | filter: rc.filter_name | orderBy: 'created_at' ">
+              <td ng-bind="request.name"></td>
+              <td ng-bind="request.artist_name"></td>
+              <td ng-bind="request.song_name"></td>
+              <td ng-bind="request.created_at | date"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+</div>

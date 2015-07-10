@@ -1,0 +1,98 @@
+*{
+	font-family: "Copperplate", Copperplate Gothic Light, serif;
+	font-weight: 300;
+}
+a.active{
+	background-color: grey !important;
+}
+h2{
+	text-align: center;
+}
+h3{
+	text-align: center;
+	color: white;
+	text-shadow: 3px 3px 3px #000;
+}
+label{
+	text-align: center;
+	color: white;
+	text-shadow: 3px 3px 3px #000;
+}
+#forest{
+	background: url('../images/forest.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 40vh;
+}
+h4{
+	color: white;
+}
+#venue{
+	background: url('../images/Snoqualmie.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 75vh;
+}
+#left{
+	height: 50vh;
+}
+#map-canvas{
+	height: 100%; 
+	margin: 0; 
+	padding: 0;
+}
+/*#login_page{
+	background: url('../images/seattle.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 100vh;
+}*/
+#pike{
+	color: white;
+	vertical-align: top;
+	background: url('../images/pike_place.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 100vh;
+}
+body {
+    display: flex;
+    color: #e0e0e0;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: black;
+}
+main {
+    flex: 1 0 auto;
+}
+#logout{
+	color: black;
+}
+#footer_text{
+	margin: 0;
+}
+#footer{
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+.row{
+	margin: 0;
+}
+th{
+	color: black;
+}
+.aco{
+	height: 100vh;
+}
+#card-pic{
+	height: 40vh;
+}

@@ -1,0 +1,59 @@
+<script type="text/javascript">
+    setTimeout(function (){
+      initialize();
+    }, 1000);
+        function initialize() {
+          var mapOptions = {
+            center: { lat: 47.5372, lng: -121.8322},
+            zoom: 8
+          };
+          var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<script>
+  $(document).ready(function(){
+    $(".button-collapse").sideNav();
+  });
+</script>
+<nav>
+    <div class="nav-wrapper black">
+      <a href="#/" class="brand-logo">Mojo Wedding 2017</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">Menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#/location" class="active">Wedding Location</a></li>
+        <li><a href="#/history">Couple's History</a></li>
+        <li><a href="#/weddingparty">Wedding Party Information</a></li>
+        <li><a href="#/accomidations">Wedding Accomidations</a></li>
+        <li><a href="#/request">Request a Reception Song</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="#/location">Wedding Location</a></li>
+        <li><a href="#/history">Couple's History</a></li>
+        <li><a href="#/weddingparty">Wedding Party</a></li>
+        <li><a href="#/accomidations">Wedding Accomidations</a></li>
+        <li><a href="#/request">Request a Reception Song</a></li>
+      </ul>
+    </div>
+</nav>
+
+<div class="row" id= "venue">
+      <div class="col s12"><h4>The wedding will be held at the Beautiful Salish Lodge and Spa. <br>
+      In Snoqualmie, WA.<br>
+      On Saturday October 7th 2017 starting at 6pm.</h4></div>
+</div>
+<div class="row">
+    <div class="col s4" id="left">
+      	<div id="map-canvas">
+      	</div>
+    </div>
+    <div class="col s4" id="center">
+    	<img class="responsive-img" src="../images/snoqualmiefalls.jpg"> 
+    </div>
+    <div class="col s4" id="right" style="overflow: scroll; height: 50vh">
+        <a href="http://www.accuweather.com/en/us/snoqualmie-wa/98065/weather-forecast/351376" class="aw-widget-legal">
+        </a><div id="awtd1436291775292" class="aw-widget-36hour"  data-locationkey="351376" data-unit="f" data-language="en-us" data-useip="false" data-uid="awtd1436291775292" data-editlocation="false"></div><script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
+    </div>
+
+</div>
